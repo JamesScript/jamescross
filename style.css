@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Rochester');
+
+body {
+    margin: 0;
+}
+
+.fullPage {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    position: fixed;
+    font-size: 80px;
+    top: 3vh;
+    right: 3vw;
+    cursor: pointer;
+    padding: 5px 5px 15px 5px;
+    user-select: none;
+    transform: rotate(0);
+    transform-origin: center;
+    opacity: 1;
+}
+
+#darkenScreen {
+    background: black;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    z-index: 200;
+    pointer-events: none;
+}
+
+.darken {
+    animation: darkify 500ms linear 0s forwards;
+}
+
+#hamburger {
+    display: block;
+}
+
+#closeHamburger {
+    display: none;
+}
+
+.spinHide {
+    animation: spinHide 500ms linear 0s forwards;
+}
+
+#nameContainer {
+    max-width: 30vw;
+}
+
+#myName {
+    font-family: 'Rochester', cursive;
+    font-size: 12vw;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#mePic {
+    height: 50vh;
+    border-radius: 10%;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes spinHide {
+    0% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes darkify {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
