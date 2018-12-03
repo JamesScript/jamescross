@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Rochester');
+@import url('https://fonts.googleapis.com/css?family=Rochester|Bree+Serif');
+
+:root {
+    --menuWidth: 630px;
+}
 
 body {
     margin: 0;
@@ -19,11 +23,11 @@ body {
     top: 3vh;
     right: 3vw;
     cursor: pointer;
-    padding: 5px 5px 15px 5px;
     user-select: none;
     transform: rotate(0);
     transform-origin: center;
-    opacity: 1;
+    text-align: center;
+    z-index: 300;
 }
 
 #darkenScreen {
@@ -35,57 +39,46 @@ body {
     height: 100vh;
     max-width: 100%;
     z-index: 200;
-    pointer-events: none;
-}
-
-.darken {
-    animation: darkify 500ms linear 0s forwards;
+    /*pointer-events: none;*/
 }
 
 #hamburger {
     display: block;
+    opacity: 1;
+    padding: 5px 5px 15px 5px;
 }
 
 #closeHamburger {
-    display: none;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    padding: 18px 19px 18px 19px;
 }
 
-.spinHide {
-    animation: spinHide 500ms linear 0s forwards;
+#mainMenu {
+    position: fixed;
+    z-index: 250;
+    top: 0;
+    width: var(--menuWidth);
+    height: 100vh;
+    right: calc(var(--menuWidth) * -1);
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    font-size: x-large;
+    overflow: scroll;
+    font-family: 'Bree Serif', serif;
+    color: black;
 }
 
-#nameContainer {
-    max-width: 30vw;
+.menuItem {
+    padding: 0 30px;
+    cursor: pointer;
 }
 
-#myName {
-    font-family: 'Rochester', cursive;
-    font-size: 12vw;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+.menuItem:hover {
+    animation: whiten 500ms ease-out 0s forwards;
 }
 
-#mePic {
-    height: 50vh;
-    border-radius: 10%;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes spinHide {
-    0% {
-        transform: rotate(0);
-        opacity: 1;
-    }
-    100% {
-        transform: rotate(720deg);
-        opacity: 0;
-    }
-}
-
-@keyframes darkify {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0.5;
-    }
+.showcaseLinks {
+    list-style: none;
 }

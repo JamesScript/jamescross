@@ -1,0 +1,15 @@
+#nameContainer {
+    max-width: 30vw;
+}
+
+#myName {
+    font-family: 'Rochester', cursive;
+    font-size: 12vw;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#mePic {
+    height: 50vh;
+    border-radius: 10%;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+}

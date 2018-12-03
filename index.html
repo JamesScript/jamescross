@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>James Cross</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="topSection.css">
+    <link rel="stylesheet" href="animations.css">
     <script src="jquery-3.3.1.min.js"></script>
 </head>
 <body>
@@ -14,7 +16,44 @@
         <img id="mePic" src="meStPeters.jpeg">
     </div>
     <div onclick="menu(true)" class="menu" id="hamburger">&#9776;</div>
-    <div onclick="menu(false)" class="menu" id="closeHamburger">X</div>
+    <div onclick="menu(false)" class="menu" id="closeHamburger"> &times;</div>
+    <div id="mainMenu">
+        <h1 class="menuItem">Developer Showcase:</h1>
+        <ul class="showcaseLinks">
+            <li class="menuItem">Front End Web Design</li>
+            <li class="menuItem">Full Stack Web Apps</li>
+            <li class="menuItem">Games</li>
+            <li class="menuItem">Audio Visualisation</li>
+            <li class="menuItem">Data Visualisation</li>
+            <li class="menuItem">Animation & Experimentation</li>
+        </ul>
+        <h1 class="menuItem">Technology:</h1>
+        <ul class="showcaseLinks">
+            <li class="menuItem">JavaScript</li>
+            <li class="menuItem">Node, Express, MongoDB</li>
+            <li class="menuItem">React</li>
+            <li class="menuItem">p5</li>
+            <li class="menuItem">Matter (Physics Engine)</li>
+            <li class="menuItem">THREE</li>
+            <li class="menuItem">D3</li>
+            <li class="menuItem">Java (Processing)</li>
+            <li class="menuItem">C++</li>
+        </ul>
+        <h1 class="menuItem">Links:</h1>
+        <ul class="showcaseLinks">
+            <li class="menuItem">GitHub</li>
+            <li class="menuItem">Codepen</li>
+            <li class="menuItem">Glitch</li>
+            <li class="menuItem">Heroku</li>
+            <li class="menuItem">LinkedIn</li>
+        </ul>
+        <h1 class="menuItem">Personal:</h1>
+        <ul class="showcaseLinks">
+            <li class="menuItem">Music</li>
+            <li class="menuItem">About Me</li>
+            <li class="menuItem">Contact</li>
+        </ul>
+    </div>
     <div id="darkenScreen"></div>
     <script src="script.js"></script>
 </body>
