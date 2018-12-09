@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rochester|Bree+Serif');
+@import url('https://fonts.googleapis.com/css?family=Rochester|Bree+Serif|Quattrocento');
 
 :root {
     --menuWidth: 630px;
@@ -6,6 +6,14 @@
 
 body {
     margin: 0;
+    background-color: #151515;
+    background-image: linear-gradient(90deg, #191919 50%, #252525 50%);
+    background-size: 20px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .fullPage {
@@ -15,19 +23,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.menu {
-    position: fixed;
-    font-size: 80px;
-    top: 3vh;
-    right: 3vw;
-    cursor: pointer;
-    user-select: none;
-    transform: rotate(0);
-    transform-origin: center;
-    text-align: center;
-    z-index: 300;
 }
 
 #darkenScreen {
@@ -40,45 +35,4 @@ body {
     max-width: 100%;
     z-index: 200;
     /*pointer-events: none;*/
-}
-
-#hamburger {
-    display: block;
-    opacity: 1;
-    padding: 5px 5px 15px 5px;
-}
-
-#closeHamburger {
-    display: block;
-    opacity: 0;
-    pointer-events: none;
-    padding: 18px 19px 18px 19px;
-}
-
-#mainMenu {
-    position: fixed;
-    z-index: 250;
-    top: 0;
-    width: var(--menuWidth);
-    height: 100vh;
-    right: calc(var(--menuWidth) * -1);
-    background: rgba(255, 255, 255, 0.5);
-    pointer-events: none;
-    font-size: x-large;
-    overflow: scroll;
-    font-family: 'Bree Serif', serif;
-    color: black;
-}
-
-.menuItem {
-    padding: 0 30px;
-    cursor: pointer;
-}
-
-.menuItem:hover {
-    animation: whiten 500ms ease-out 0s forwards;
-}
-
-.showcaseLinks {
-    list-style: none;
 }
