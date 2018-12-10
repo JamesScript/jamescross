@@ -9,6 +9,7 @@
     transform-origin: center;
     text-align: center;
     z-index: 300;
+    overflow-x: hidden;
 }
 
 #hamburger {
